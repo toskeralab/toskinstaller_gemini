@@ -1,0 +1,35 @@
+name: Build TOSKINSTALLER Portable Release
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Código
+      uses: actions/checkout@v3
+
+    - name: Configurar Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Instalar Dependências
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Compilar Executável Portátil
+      run: |
+        python build_portable.py
+
+    - name: Upload Artifact Executável Portátil
+      uses: actions/upload-artifact@v3
+      with:
+        name: TOSKINSTALLER_Portable_Windows
+        path: dist/TOSKINSTALLER_Portable.exe
