@@ -89,3 +89,25 @@ To be defined by ToskeraLAB ART/TECH House.
 ---
 
 nir pela ToskeraLAB ART/TECH House.
+
+# 🚀 TOSKINSTALLER
+
+> **Desenvolvido por:** ToskeraLAB ART/TECH House  
+> **Repositório:** `https://github.com/toskeralab/toskinstaller_gemini`
+
+O **TOSKINSTALLER** é um aplicativo portátil para Windows projetado para automatizar a conversão de projetos de software (como projetos Python ou Vibe Coding) em executáveis standalone e empacotá-los em instaladores profissionais (.EXE com Setup Wizard, .MSI ou Extrator Portable).
+
+---
+
+## 🛠️ Como Compilar o TOSKINSTALLER em um Único Executável Portátil (.exe)
+
+### Pré-requisitos (Windows)
+* Python 3.10 ou superior instalado no Windows.
+* Git instalado.
+
+### Passo a Passo de Compilação
+
+1. **Clonar o Repositório:**
+   ```cmd
+   git clone [https://github.com/toskeralab/toskinstaller_gemini.git](https://github.com/toskeralab/toskinstaller_gemini.git)
+   cd toskinstaller_gemini
