@@ -118,7 +118,7 @@ Alt + Enter : Alterna entre o modo de tela inteira e janela.
 
 **1. Clonar o Repositório:**
 ```cmd
-git clone [https://github.com/toskeralab/toskinstaller_gemini.git](https://github.com/toskeralab/toskinstaller_gemini.git)
+git clone https://github.com/toskeralab/toskinstaller_gemini.git
 cd toskinstaller_gemini
 ```
 
