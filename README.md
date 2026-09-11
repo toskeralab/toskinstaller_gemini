@@ -114,23 +114,29 @@ Alt + Enter : Alterna entre o modo de tela inteira e janela.
 
 ### Passo a Passo de Compilação
 
-1. **Clonar o Repositório:**
-   ```cmd
-   git clone https://github.com/toskeralab/toskinstaller_gemini.git
-cd toskinstaller_gemini
+### Passo a Passo de Compilação
 
-2. **Criar e Ativar Ambiente Virtual:**
-   ```cmd
+**1. Clonar o Repositório:**
+```cmd
+git clone [https://github.com/toskeralab/toskinstaller_gemini.git](https://github.com/toskeralab/toskinstaller_gemini.git)
+cd toskinstaller_gemini
+```
+
+**2. Criar e Ativar Ambiente Virtual:**
+```cmd
 python -m venv venv
 call venv\Scripts\activate
+```
 
-3. **Instalar Dependências:**
-   ```cmd
-  pip install -r requirements.txt
+**3. Instalar Dependências:**
+```cmd
+pip install -r requirements.txt
+```
 
-4. **Gerar o Executável Portátil Único:**
-   ```cmd
+**4. Gerar o Executável Portátil Único:**
+```cmd
 python build_portable.py
+```
 
 5. **Localização do Binário:**
 O executável portátil standalone gerado estará pronto para uso na pasta:
