@@ -109,5 +109,5 @@ O **TOSKINSTALLER** é um aplicativo portátil para Windows projetado para autom
 
 1. **Clonar o Repositório:**
    ```cmd
-   git clone [https://github.com/toskeralab/toskinstaller_gemini.git](https://github.com/toskeralab/toskinstaller_gemini.git)
+   git clone [https://github.com/toskeralab/toskinstaller_gemini.git]
    cd toskinstaller_gemini
