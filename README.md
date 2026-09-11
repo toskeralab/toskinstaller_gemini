@@ -105,9 +105,42 @@ O **TOSKINSTALLER** é um aplicativo portátil para Windows projetado para autom
 * Python 3.10 ou superior instalado no Windows.
 * Git instalado.
 
+### Atalho de teclado para abrir o Prompt de Comando (CMD)
+Windows (ou Windows + R) e digite “cmd” : Execute o Prompt de Comando no modo normal.
+Win + X e pressione C : Execute o Prompt de Comando no modo normal. (Novo no Windows 10)
+Win + X e pressione A : Execute o Prompt de Comando com privilégios administrativos. (Novo no Windows 10)
+Alt + F4 (ou digite “sair” no prompt) : Fechar o Prompt de Comando.
+Alt + Enter : Alterna entre o modo de tela inteira e janela.
+
 ### Passo a Passo de Compilação
 
 1. **Clonar o Repositório:**
    ```cmd
    git clone https://github.com/toskeralab/toskinstaller_gemini.git
 cd toskinstaller_gemini
+
+2. **Criar e Ativar Ambiente Virtual:**
+   ```cmd
+python -m venv venv
+call venv\Scripts\activate
+
+3. **Instalar Dependências:**
+   ```cmd
+  pip install -r requirements.txt
+
+4. **Gerar o Executável Portátil Único:**
+   ```cmd
+python build_portable.py
+
+5. **Localização do Binário:**
+O executável portátil standalone gerado estará pronto para uso na pasta:
+dist/TOSKINSTALLER_Portable.exe
+
+💻 Como Usar o TOSKINSTALLER
+Abra o TOSKINSTALLER_Portable.exe.
+
+Etapa 1: Selecione a pasta do seu projeto Python/Node, clique em Converter Projeto em Executável. Caso falte o PyInstaller ou Nuitka, o TOSKINSTALLER exibirá um guia de comando para instalação.
+
+Etapa 2: Escolha o tema visual, o estilo da animação de porcentagem, atalhos, softwares parceiros e o formato final (.EXE, .MSI ou Portable).
+
+Clique em Gerar Pacote Final para obter o seu instalador pronto para distribuição aos usuários finais.
