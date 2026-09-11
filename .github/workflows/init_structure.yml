@@ -3,14 +3,18 @@ name: Criar Estrutura Inicial
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+  workflows: write
+
 jobs:
   scaffold:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout do Repositório
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Criar Diretórios e Arquivos Vazios
         run: |
@@ -41,8 +45,8 @@ jobs:
 
       - name: Commit e Push Nativo
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "chore: cria estrutura de diretórios e arquivos vazios" || exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: cria estrutura de diretorios e arquivos vazios" || echo "Nada a commitar"
           git push
