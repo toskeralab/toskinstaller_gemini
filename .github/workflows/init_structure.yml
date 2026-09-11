@@ -5,7 +5,6 @@ on:
 
 permissions:
   contents: write
-  workflows: write
 
 jobs:
   scaffold:
@@ -13,14 +12,11 @@ jobs:
     steps:
       - name: Checkout do Repositório
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Criar Diretórios e Arquivos Vazios
         run: |
-          mkdir -p .github/workflows assets/themes src/core src/gui src/runtime_stub src/utils
+          mkdir -p assets/themes src/core src/gui src/runtime_stub src/utils
           
-          touch .github/workflows/build_release.yml
           touch assets/themes/toskera_cyber.json
           touch assets/default_banner.png
           touch src/__init__.py
